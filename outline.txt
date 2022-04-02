@@ -1,0 +1,4 @@
+playlist title section
+music pannel
+	music list
+control buttons

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- fontawesome -->
+	<script src="https://kit.fontawesome.com/e1549f15ba.js" crossorigin="anonymous"></script>
+	<!-- css -->
+	<link rel="stylesheet" href="style.css">
+	
+	<title>Spotify</title>
+</head>
+<body>
+	<div class="main-container">
+		<div class="left-side">
+			<div class="title-container">
+				<div class="box">
+					<h1 id="title">Title</h1>
+					<p id="singer">singer</p>
+				</div>
+			</div>
+			<div class="lyric-container">
+				<div class="box">
+					<p id="lyric"></p>
+				</div>
+			</div>
+			<div class="thumbnail-container">
+				<div class="box">
+					<img src="images/thumbnail.jpg" alt="" id="thumbnail">
+
+				</div>
+			</div>
+		</div>
+
+		<!-- right side -->
+		<div class="right-side">
+			<div class="playlist-header">
+				<div class="box1">
+					<img src="images/liked-logo.png" alt="">
+				</div>
+				<div class="box2">
+					<p>PLAYLIST</p>
+					<h1>Liked Songs</h1>
+					<p><span id="song-number">10</span> songs</p>
+				</div>
+			</div>
+			<div class="shuffle-bar-container">
+				<div class="shuffle-btn" id="playPause">
+					<img src="images/spotify.png" alt="" width="50px">
+				</div>
+			</div>
+			<div class="music-playlist-container">
+				<div class="box">
+					<table>
+						<thead>
+							<tr>
+								<td class="song-number">#</td>
+								<td class="song-thumbnail">Title</td>
+								<td class="song-title"></td>
+								<td class="song-date">Author</td>
+								<td class="song-duration">Duration</td>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="control-bar-container">
+					<div id="prev">
+						<i class="fa-solid fa-backward-step"></i>
+					</div>
+					<div id="playPause">
+						<audio src="songs/toxic.mp3" id="audioTag" controls></audio>
+						<i class="fa-solid fa-play" id="playIcon"></i>
+					</div>
+					<div id="next">
+						<i class="fa-solid fa-forward-step"></i>
+					</div>
+			</div>
+		</div>
+	</div>
+	<script src="script.js"></script>
+</body>
+</html>

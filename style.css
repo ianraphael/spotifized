@@ -1,0 +1,229 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: monospace;
+}
+
+.main-container {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
+
+/* left side */
+.left-side {
+	width: 20%;
+	height: inherit;
+}
+.left-side .title-container {
+	height: 15%;
+	background-color: rgb(91, 148, 129);
+}
+.left-side .title-container .box {
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.left-side .lyric-container {
+	height: 55%;
+	background-color: black;
+	overflow-y: scroll;
+	
+}
+.left-side .lyric-container::-webkit-scrollbar {
+	display: none;
+ }
+ .left-side .lyric-container {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+ }
+.left-side .lyric-container .box {
+	color: white;
+	font-size: 1.5rem;
+	padding: 10px;
+	text-align: center;
+}
+.left-side .thumbnail-container {
+	height: 30%;
+	background-color:rgb(105, 105, 105)
+}
+.left-side .thumbnail-container .box {
+	width: 100%;
+	height: 100%;
+	padding: 5px;
+}
+.left-side .thumbnail-container .box img {
+	width: 100%;
+	height: 100%;
+}
+
+/* right side */
+.right-side {
+	width: 80%;
+	height: inherit;
+	overflow-y: scroll;
+	background-color: black;
+}
+.right-side::-webkit-scrollbar {
+	display: none;
+ }
+ .right-side {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+ }
+.right-side .playlist-header {
+	background: rgb(48,91,189);
+	background: linear-gradient(0deg, rgba(48,91,189,1) 84%, rgba(0,0,0,1) 100%, rgba(0,212,255,1) 100%);
+	padding: 10px;
+	display: flex;
+	gap: 20px;
+}
+.right-side .playlist-header .box1 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.right-side .playlist-header .box1 img {
+	width: 250px;
+}
+.right-side .playlist-header .box2 {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	color: white;
+}
+.right-side .playlist-header .box2 h1 {
+	font-size: 4rem;
+	font-weight: bolder;
+
+}
+.right-side .playlist-header .box2 p:first-child {
+	font-size: 2rem;
+}
+.right-side .playlist-header .box2 p:last-child {
+	font-size: 1.5rem;
+	color: rgba(255, 255, 255, 0.75);
+}
+.right-side .shuffle-bar-container {
+	background: rgb(0,0,0);
+background: linear-gradient(0deg, rgba(0,0,0,1) 26%, rgba(48,91,189,1) 100%, rgba(0,212,255,1) 100%);
+	height: 15%;
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	z-index: 100;
+}
+.right-side .shuffle-bar-container .shuffle-btn {
+	background-color: green;
+	height: 75px;
+	width: 75px;
+	font-size: 3rem;
+	color: white;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	margin-left: 20px;
+}
+
+.music-playlist-container {
+	height: 70%;
+	background-color: black;
+	padding: 0 20px;
+}
+.music-playlist-container .box {
+	overflow-y: scroll;
+	height: auto;
+}
+.music-playlist-container .box::-webkit-scrollbar {
+	display: none;
+}
+.music-playlist-container .box {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+}
+
+.music-playlist-container .box table {
+	width: 100%;
+	border-spacing: 0;
+	text-align: center;
+	color: white;
+}
+.music-playlist-container .box table thead {
+	font-size: 1.9rem;
+	color: rgb(110, 110, 110);
+}
+.music-playlist-container .box table thead tr td:nth-child(3) {
+	width: 35%;
+	text-align: start;
+}
+.music-playlist-container .box table tbody tr {
+	border-radius: 8px;
+	padding: 10px 0;
+}
+.music-playlist-container .box table tbody tr td {
+	font-size: 1.4rem;
+	padding: 10px 0;
+}
+.music-playlist-container .box table tbody tr td:nth-child(3) {
+	text-align: start;
+}
+.music-playlist-container .box table tbody tr td:first-child {
+	border-bottom-left-radius: 8px;
+	border-top-left-radius: 8px;
+}
+.music-playlist-container .box table tbody tr td:last-child {
+	border-bottom-right-radius: 8px;
+	border-top-right-radius: 8px;
+}
+.music-playlist-container .box table tbody tr td:nth-child(2) {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.music-playlist-container .box table tbody tr:hover {
+	background-color: rgba(255, 255, 255, 0.080);
+}
+
+.right-side .music-playlist-container {
+	height: 1000px;
+}
+
+.right-side .control-bar-container {
+	height: 15%;
+	background-color: rgba(255, 255, 255, 0.100);
+	position: sticky;
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 50px;
+}
+.right-side .control-bar-container div {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 2.5rem;
+	cursor: pointer;
+	color: white;
+}
+.right-side .control-bar-container div:nth-child(2) {
+	height: 50px;
+	width: 50px;
+	font-size: 2rem;
+	background-color: white;
+	color: black;
+	border-radius: 50%;
+}
+audio {
+	display: none;
+}
+
+.active {
+	background-color: rgba(0, 128, 0, 0.836);
+}
